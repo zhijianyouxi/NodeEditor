@@ -1,0 +1,16 @@
+//
+// Created by Q on 2024/4/9.
+//
+
+#include <NodeEditor/displayPolygons.h>
+
+
+void displayPolygons::show_() {
+    NE::drawPolygons(polygons,"a");
+}
+
+void displayPolygons::execute() {
+    polygonsPin.updateValue();
+    polygons = polygonsPin.getValue();
+    setExecuted();
+}

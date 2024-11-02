@@ -1,0 +1,28 @@
+//
+// Created by Q on 2024/4/9.
+//
+
+#ifndef GFSLICER_SLC2POLYGONS_H
+#define GFSLICER_SLC2POLYGONS_H
+#include <NodeEditor/Node.h>
+#include <NodeEditor/Pins.h>
+
+class SLC2Polygons: public Node{
+public:
+    SLC2Polygons() : Node("SLC2Polygons") {
+        inputPins.emplace_back(&slcpin);
+        outputPins.emplace_back(&polygonsPin);
+    }
+    PolygonsPin polygonsPin = PolygonsPin("output", "Polygons",this);
+    SLCPin slcpin = SLCPin("input", "SLC",this);
+
+    void execute() override;
+    void show_() override;
+    ~SLC2Polygons() = default;
+private:
+    int index = 0;
+    int layerIndex = 0;
+};
+
+
+#endif //GFSLICER_SLC2POLYGONS_H

@@ -1,0 +1,16 @@
+{
+  "dependencies": [
+    "cgal",
+    "grpc",
+    {
+      "name": "imgui",
+      "features": [
+        "opengl3-binding",
+        "sdl2-binding"
+      ]
+    },
+    "implot",
+    "nlohmann-json",
+    "sdl2"
+  ]
+}
