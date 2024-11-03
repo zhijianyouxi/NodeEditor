@@ -27,9 +27,10 @@ option(NODE_BUILD_SHARED "Build shared library for NodeEditor" OFF)
 option(NODE_DBG "Enable debug mode" OFF)
 option(NODE_NO_WARNING "Use customized compiler warnings" OFF)
 
-if (NOT CMAKE_BUILD_TYPE)
-    set(CMAKE_BUILD_TYPE Release)
-endif()
+#if (NOT CMAKE_BUILD_TYPE)
+#    set(CMAKE_BUILD_TYPE Release)
+#endif()
+set(CMAKE_BUILD_TYPE Debug)
 message(STATUS "Build directory: ${PROJECT_BINARY_DIR}")
 message(STATUS "Build type: ${CMAKE_BUILD_TYPE}")
 

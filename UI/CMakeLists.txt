@@ -10,9 +10,9 @@ find_package(implot CONFIG REQUIRED)
 
 add_executable (Editor ${source} "GuiMain.cpp")
 
-if (ZENO_DEBUG_MSVC)
-    node_dbg_msvc(Editor)
-endif()
+#if (ZENO_DEBUG_MSVC)
+#node_dbg_msvc(Editor)
+#endif()
 
 #target_include_directories(Editor PRIVATE ${SDL2_INCLUDE_DIRS})
 
