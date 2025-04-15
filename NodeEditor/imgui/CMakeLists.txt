@@ -6,4 +6,4 @@ file(GLOB_RECURSE srcs CONFIGURE_DEPENDS src/*.cpp srcs/*.h)
 add_library(imgui STATIC ${srcs}) 
 
 target_include_directories(imgui PUBLIC src)
-#target_link_libraries(imgui PRIVATE SDL2::SDL2 SDL2::SDL2main)
+#target_link_libraries(imgui PRIVATE SDL3::SDL3 SDL3::SDL3main)

@@ -2,7 +2,7 @@
 #include <NodeEditor/pin.h>
 #include <NodeEditor/node.h>
 #include <NodeEditor/graph.h>
-#include <SDL_timer.h>
+#include <SDL3/SDL_timer.h>
 #include <algorithm>
 #include <NodeEditor/ImPlotDrawer.h>
 #include <iostream>

@@ -4,7 +4,7 @@ file(GLOB_RECURSE srcs CONFIGURE_DEPENDS src/*.cpp include/*.h)
 
 #add_subdirectory(imgui)
 find_package(CGAL CONFIG REQUIRED)
-find_package(SDL2 CONFIG REQUIRED)
+find_package(SDL3 CONFIG REQUIRED)
 find_package(imgui CONFIG REQUIRED)
 find_package(implot CONFIG REQUIRED)
 
@@ -13,10 +13,10 @@ find_package(implot CONFIG REQUIRED)
 #link_directories(sdl2/lib/x64)
 add_executable (NodeEditor ${srcs} "GuiMain.cpp")
 #target_include_directories(NodeEditor PRIVATE sdl2/include)
-target_include_directories(NodeEditor PRIVATE ${SDL2_INCLUDE_DIRS})
+target_include_directories(NodeEditor PRIVATE ${SDL3_INCLUDE_DIRS})
 
 target_include_directories(NodeEditor PUBLIC include)
 #target_include_directories(NodeEditor PRIVATE ../Alg/include/Alg)
 
-target_link_libraries(NodeEditor PRIVATE CGAL::CGAL ${SDL2_LIBRARIES} OpenGL32.Lib imgui::imgui implot::implot)
+target_link_libraries(NodeEditor PRIVATE CGAL::CGAL ${SDL3_LIBRARIES} OpenGL32.Lib imgui::imgui implot::implot)
 
